@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="logo2.png" type="image/x-icon">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-[#802C6E] p-3">
+    <main class="bg-white p-3 rounded-md">
+        <div class="mb-6">
+            <div>
+                    <input 
+                    type="text" 
+                    placeholder="O que está buscando?"
+                    class="w-full h-[40px] border-2 border-gray-400 focus:border-[#802C6E]  outline-none rounded-md pl-3 duration-200 ">
+            </div>
+            <div onclick="showFilter()" 
+            class="w-[50px] h-[50px] bg-[#802C6E]  rounded-full fixed bottom-6 right-3 flex justify-center items-center z-50 fill-white">
+        <box-icon type="solid" name="filter-alt"></box-icon>
+        </div>
+        <div id="overlay" onclick="showFilter()" class="w-full h-full bg-black opacity-0 invisible fixed top-0 left-0 z-40 duration-200"></div>
+        <div id="gaveta" class="w-300 h-full bg-white fixed top-0 -right-full z-40 duration-200">
+           <h4 class="text-2xl m-3 bg-[#b663a4] ">Categoria</h4>
+           <ul>
+            <li>
+           
+           <input class="m-3" type="checkbox" name="Roupa Masculina" id="Roupa Masculina">
+           <label for="">Roupa Masculina</label>
+        </li>
+        <li>
+           
+           <input  class="m-3"  type="checkbox" name="Roupa Feminina" id="roupa feminina">
+           <label for="">Roupa Feminina</label>
+        </li>
+        <li>
+           
+           <input  class="m-3"  type="checkbox" name="Joelheria" id="joalheria">
+           <label for="">Joelheria</label>
+        </li>
+    
+           <input   class="m-3" type="checkbox" name="Eletrônicos" id="Eletronicos">
+           <label for="">Eletrônicos</label>
+        </ul>
+        <h4 class="text-2xl m-3 bg-[#b663a4] ">Filtrar</h4>
+        <ul>
+        <li>
+           
+            <input  class="m-3"  type="checkbox" name="por avaliacao" id="por avaliacao">
+            <label for="">Por avaliação</label>
+         </li>
+     
+            <input  class="m-3"  type="checkbox" name="por preço" id="por preco">
+            <label for="">Por preço</label>
+         </ul>
+           
+    </div>
+    </div>
+    <section id="produtos" class="grid gap-3 md:grid-cols-2 lg:grid-cols-4 ">vazia</section>
+    </main>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
